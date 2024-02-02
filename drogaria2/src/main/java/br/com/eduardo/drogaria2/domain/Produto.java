@@ -8,6 +8,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -33,5 +35,8 @@ public class Produto {
 	@Column(nullable = false)
 	private LocalDate dataDeValidade;
 	
-	
+	@ManyToOne
+	//se for OneToOne o unique tem que ser true, se for ManyToOne unique = falso (padrao)
+	@JoinColumn(nullable = false)
+	private Categoria categoria;
 }
