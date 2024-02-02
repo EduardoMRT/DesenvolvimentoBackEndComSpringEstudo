@@ -10,8 +10,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class ProdutoTests {
 	@Test
 	public void criar() {
-		Produto p = new Produto(Short.valueOf("1"), "Coca Cola", Short.valueOf("15"), BigDecimal.valueOf(10.50), LocalDate.of(2024, 12, 23));
-	
+		Produto p = new Produto(Short.valueOf("1"), "Coca Cola", Short.valueOf("15"), BigDecimal.valueOf(10.50),
+				LocalDate.of(2024, 12, 23));
+
 		System.out.println(p);
 	}
 }
