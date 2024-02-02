@@ -3,6 +3,13 @@ package br.com.eduardo.drogaria2.domain;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Produto {
 	private Short codigo;
 	
@@ -13,5 +20,6 @@ public class Produto {
 	private BigDecimal preco;
 
 	private LocalDate dataDeValidade;
+	
 	
 }
